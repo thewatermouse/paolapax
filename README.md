@@ -16,7 +16,7 @@ atributos `data-pt` / `data-en` + `localStorage`.
   Instagram [@apaolabianchi](https://instagram.com/apaolabianchi)
 - Números do hero (seguidores/curtidas do TikTok) — **atualizar periodicamente**,
   foram capturados em 28/09/2026
-- Base em São Paulo, audiência internacional (BR/MX/FR/UK) — vem da bio pública do TikTok
+- Base em São Paulo, audiência internacional (BR/MX/FR/US) — vem da bio pública do TikTok
 
 ## O que é placeholder (marcar com a Paola antes de publicar)
 
