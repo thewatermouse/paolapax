@@ -221,7 +221,9 @@
   #contato{ text-align:center; }
   #contato .section-head{ margin:0 auto 38px; }
   .contact-row{ display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-bottom:26px; }
-  .contact-note{ font-size:14px; font-style:italic; color:var(--plum-soft); opacity:.8; }
+  .contact-note{ font-size:14px; font-style:italic; color:var(--plum-soft); opacity:.9; }
+  .contact-note a{ color:var(--coral-deep); font-weight:700; font-style:normal; text-decoration:underline; }
+  #publis .contact-note a{ color:var(--sun); }
 
   footer{
     padding:38px 0; border-top:1px solid var(--line); text-align:center; font-size:13px; color:var(--plum-soft);
@@ -336,10 +338,24 @@
           <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
           <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7568637392324791559" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
         </article>
+        <article class="pcard" data-embed="https://www.instagram.com/reel/DZI3U3ks7lU/embed/" data-title="Pantene" style="background-image:url(fotos/publi-pantene1.jpg)">
+          <div class="pcard-top"><span class="pill">Cabelo</span><span class="pcard-n">06</span></div>
+          <button class="pplay" type="button" aria-label="Assistir Pantene"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
+          <h3>Pantene</h3>
+          <p class="pcard-meta" data-pt="Conteúdo patrocinado no Instagram" data-en="Sponsored content on Instagram">Conteúdo patrocinado no Instagram</p>
+          <a class="pcard-link" href="https://www.instagram.com/reel/DZI3U3ks7lU/" target="_blank" rel="noopener" data-pt="Abrir no Instagram" data-en="Open on Instagram">Abrir no Instagram</a>
+        </article>
+        <article class="pcard" data-embed="https://www.instagram.com/reel/DOL4bswDbXE/embed/" data-title="Pantene" style="background-image:url(fotos/publi-pantene2.jpg)">
+          <div class="pcard-top"><span class="pill">Protagonista Pantene</span><span class="pcard-n">07</span></div>
+          <button class="pplay" type="button" aria-label="Assistir Pantene"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
+          <h3>Pantene</h3>
+          <p class="pcard-meta" data-pt="Conteúdo patrocinado no Instagram" data-en="Sponsored content on Instagram">Conteúdo patrocinado no Instagram</p>
+          <a class="pcard-link" href="https://www.instagram.com/reel/DOL4bswDbXE/" target="_blank" rel="noopener" data-pt="Abrir no Instagram" data-en="Open on Instagram">Abrir no Instagram</a>
+        </article>
         </div>
         <button class="pc-btn pc-next" type="button" aria-label="Próximo">&#8594;</button>
       </div>
-      <p class="contact-note" data-pt="Todas as publis são sinalizadas como publicidade. Ao tocar em assistir, o vídeo é carregado do TikTok." data-en="All sponsored posts are disclosed as ads. When you tap watch, the video is loaded from TikTok.">Todas as publis são sinalizadas como publicidade. Ao tocar em assistir, o vídeo é carregado do TikTok.</p>
+      <p class="contact-note" data-pt="Todas as publis são sinalizadas como publicidade. Ao tocar no vídeo, ele é carregado do TikTok ou do Instagram." data-en="All sponsored posts are disclosed as ads. When you tap a video, it is loaded from TikTok or Instagram.">Todas as publis são sinalizadas como publicidade. Ao tocar no vídeo, ele é carregado do TikTok ou do Instagram.</p>
     </div>
   </section>
 
@@ -431,10 +447,10 @@
         <fieldset>
           <legend data-pt="Sobre o que você quer falar?" data-en="What would you like to talk about?">Sobre o que você quer falar?</legend>
           <div class="topics">
-          <input type="radio" name="assunto" id="a-publi" value="Publi UGC/Ads" checked><label for="a-publi" data-pt="Publi UGC/Ads" data-en="UGC/Ads sponsored post">Publi UGC/Ads</label>
+          <input type="radio" name="assunto" id="a-publi" value="Publi" checked><label for="a-publi" data-pt="Publi" data-en="Sponsored post">Publi</label>
           <input type="radio" name="assunto" id="a-live" value="Parceria em Live"><label for="a-live" data-pt="Parceria em Live" data-en="Live partnership">Parceria em Live</label>
           <input type="radio" name="assunto" id="a-collab" value="Collabs"><label for="a-collab" data-pt="Collabs" data-en="Collabs">Collabs</label>
-          <input type="radio" name="assunto" id="a-outros" value="Outros assuntos"><label for="a-outros" data-pt="Outros assuntos" data-en="Other">Outros assuntos</label>
+          <input type="radio" name="assunto" id="a-outros" value="Outros Assuntos"><label for="a-outros" data-pt="Outros Assuntos" data-en="Other topics">Outros Assuntos</label>
           </div>
         </fieldset>
         <div class="row">
@@ -452,7 +468,7 @@
         <a class="btn btn--solid" href="https://instagram.com/apaolabianchi" target="_blank" rel="noopener" data-pt="DM no Instagram" data-en="DM on Instagram">DM no Instagram</a>
         <a class="btn" href="https://www.tiktok.com/@apaolapax" target="_blank" rel="noopener" data-pt="Mensagem no TikTok" data-en="Message on TikTok">Mensagem no TikTok</a>
       </div>
-      <p class="contact-note" data-pt="Todos os meus links: linktr.ee/paolapax" data-en="All my links: linktr.ee/paolapax"><a href="https://linktr.ee/paolapax" target="_blank" rel="noopener">Todos os meus links: linktr.ee/paolapax</a></p>
+      <p class="contact-note"><span data-pt="Todos os meus links:" data-en="All my links:">Todos os meus links:</span> <a href="https://linktr.ee/paolapax" target="_blank" rel="noopener">linktr.ee/paolapax</a></p>
     </div>
   </section>
 
