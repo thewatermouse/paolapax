@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paola Pax</title>
-<meta name="description" content="Paola Pax — criadora e streamer. Moodboard, projetos e contato.">
+<meta name="description" content="Paola Pax — criadora e streamer. Trabalhos com marcas, projetos e contato.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:title" content="Paola Pax">
-<meta property="og:description" content="Criadora e streamer. Moodboard, projetos e contato.">
+<meta property="og:description" content="Criadora e streamer. Trabalhos com marcas, projetos e contato.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +96,32 @@
   .section-head{ max-width:640px; margin-bottom:44px; }
   .section-head h2{ font-size:clamp(34px,5vw,52px); margin-top:10px; }
 
-  /* ---------- moodboard ---------- */
+
+  /* ---------- publis carousel ---------- */
+  #publis{ background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .pc{ position:relative; }
+  .pc-track{ display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; padding:6px 2px 18px; scrollbar-width:none; }
+  .pc-track::-webkit-scrollbar{ display:none; }
+  .pcard{ flex:0 0 300px; height:520px; scroll-snap-align:start; background:var(--plum); color:var(--paper); border-radius:var(--radius); padding:26px 24px; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+  .pcard::before{ content:""; position:absolute; right:-70px; top:-70px; width:210px; height:210px; border-radius:50%; background:var(--coral); opacity:.9; }
+  .pcard > *{ position:relative; }
+  .pcard-top{ display:flex; justify-content:space-between; align-items:center; }
+  .pcard .pill{ background:rgba(255,246,233,.14); color:var(--paper); }
+  .pcard-n{ font-family:'Instrument Serif',serif; font-size:22px; color:var(--plum); }
+  .pcard h3{ margin-top:auto; font-size:42px; line-height:1; }
+  .pcard-meta{ margin:12px 0 22px; font-size:13px; opacity:.75; }
+  .pcard .btn--solid{ background:var(--sun); color:var(--plum); border-color:var(--sun); justify-content:center; }
+  .pcard-link{ margin-top:14px; font-size:13px; text-align:center; opacity:.75; }
+  .pcard.playing{ padding:0; background:#000; }
+  .pcard.playing::before{ display:none; }
+  .pcard.playing > :not(iframe):not(.pcard-link){ display:none; }
+  .pcard.playing .pcard-link{ order:2; margin:0; padding:12px; background:#000; color:#fff; opacity:1; }
+  .pcard iframe{ width:100%; flex:1; min-height:0; border:0; display:block; order:1; }
+  .pc-btn{ position:absolute; top:50%; transform:translateY(-60%); width:44px; height:44px; border-radius:50%; border:2px solid var(--plum); background:var(--paper); color:var(--plum); font-size:20px; cursor:pointer; z-index:2; }
+  .pc-prev{ left:-14px; } .pc-next{ right:-14px; }
+  @media (max-width:700px){ .pc-btn{ display:none; } .pcard{ flex-basis:80vw; } }
+
+  /* ---------- moodboard (removido) ---------- */
   #moodboard{ background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
   .mood-grid{
     display:grid; grid-template-columns:repeat(6,1fr); gap:16px; grid-auto-rows:120px;
@@ -177,8 +202,8 @@
   <nav class="nav wrap">
     <a class="logo" href="#top">Paola Pax</a>
     <div class="navlinks">
-      <a href="#moodboard" data-pt="Moodboard" data-en="Moodboard">Moodboard</a>
       <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="#publis" data-pt="Publis" data-en="Brand work">Publis</a>
       <a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a>
       <a href="#contato" data-pt="Contato" data-en="Contact">Contato</a>
       <button id="lang-toggle" class="always-show" aria-label="Toggle language">EN</button>
@@ -207,23 +232,6 @@
     </div>
   </section>
 
-  <section id="moodboard">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow" data-pt="Referências" data-en="References">Referências</p>
-        <h2 data-pt="O universo <span class='italic'>visual</span>" data-en="The <span class='italic'>visual</span> world">O universo <span class="italic">visual</span></h2>
-      </div>
-      <div class="mood-grid reveal">
-        <div class="tile t1 todo"><span data-pt="still da live" data-en="live still">still da live</span></div>
-        <div class="tile t2 todo"><span data-pt="referência de estilo" data-en="style reference">referência de estilo</span></div>
-        <div class="tile t3 todo"><span data-pt="arte / inspiração" data-en="art / inspiration">arte / inspiração</span></div>
-        <div class="tile t4 todo"><span data-pt="bastidores" data-en="behind the scenes">bastidores</span></div>
-        <div class="tile t5 todo"><span data-pt="paleta do momento" data-en="current palette">paleta do momento</span></div>
-        <div class="tile t6 todo"><span data-pt="mood do dia" data-en="mood of the day">mood do dia</span></div>
-        <div class="tile t7 todo"><span data-pt="foto de capa" data-en="cover shot">foto de capa</span></div>
-      </div>
-    </div>
-  </section>
 
   <section id="sobre">
     <div class="wrap sobre-grid">
@@ -243,6 +251,57 @@
     </div>
   </section>
 
+  <section id="publis">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-pt="Trabalhos com marcas" data-en="Brand work">Trabalhos com marcas</p>
+        <h2 data-pt="Publis <span class='italic'>recentes</span>" data-en="Recent <span class='italic'>sponsored posts</span>">Publis <span class="italic">recentes</span></h2>
+      </div>
+      <div class="pc reveal">
+        <button class="pc-btn pc-prev" type="button" aria-label="Anterior">&#8592;</button>
+        <div class="pc-track" id="pc-track">
+        <article class="pcard" data-id="7706636496312225042">
+          <div class="pcard-top"><span class="pill">Bayer</span><span class="pcard-n">01</span></div>
+          <h3>Bepantol Baby</h3>
+          <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
+          <button class="btn btn--solid pplay" type="button" data-pt="Assistir aqui" data-en="Watch here">Assistir aqui</button>
+          <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7706636496312225042" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
+        </article>
+        <article class="pcard" data-id="7705401585278471442">
+          <div class="pcard-top"><span class="pill">Chocotrio</span><span class="pcard-n">02</span></div>
+          <h3>Nestlé Chocolates</h3>
+          <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
+          <button class="btn btn--solid pplay" type="button" data-pt="Assistir aqui" data-en="Watch here">Assistir aqui</button>
+          <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7705401585278471442" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
+        </article>
+        <article class="pcard" data-id="7576404381952756999">
+          <div class="pcard-top"><span class="pill">Aluguel de carros</span><span class="pcard-n">03</span></div>
+          <h3>Localiza</h3>
+          <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
+          <button class="btn btn--solid pplay" type="button" data-pt="Assistir aqui" data-en="Watch here">Assistir aqui</button>
+          <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7576404381952756999" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
+        </article>
+        <article class="pcard" data-id="7570059498543402248">
+          <div class="pcard-top"><span class="pill">Cabelo</span><span class="pcard-n">04</span></div>
+          <h3>Matrix</h3>
+          <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
+          <button class="btn btn--solid pplay" type="button" data-pt="Assistir aqui" data-en="Watch here">Assistir aqui</button>
+          <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7570059498543402248" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
+        </article>
+        <article class="pcard" data-id="7568637392324791559">
+          <div class="pcard-top"><span class="pill">Celulares</span><span class="pcard-n">05</span></div>
+          <h3>Black Friday Indecente</h3>
+          <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
+          <button class="btn btn--solid pplay" type="button" data-pt="Assistir aqui" data-en="Watch here">Assistir aqui</button>
+          <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7568637392324791559" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
+        </article>
+        </div>
+        <button class="pc-btn pc-next" type="button" aria-label="Próximo">&#8594;</button>
+      </div>
+      <p class="contact-note" data-pt="Todas as publis são sinalizadas como publicidade. Ao tocar em assistir, o vídeo é carregado do TikTok." data-en="All sponsored posts are disclosed as ads. When you tap watch, the video is loaded from TikTok.">Todas as publis são sinalizadas como publicidade. Ao tocar em assistir, o vídeo é carregado do TikTok.</p>
+    </div>
+  </section>
+
   <section id="projetos">
     <div class="wrap">
       <div class="section-head reveal">
@@ -259,13 +318,8 @@
         <div class="card">
           <span class="pill" data-pt="Bastidores" data-en="Behind the scenes">Bastidores</span>
           <h3>Instagram</h3>
-          <p data-pt="Bastidores, moodboard pessoal e o dia a dia fora da live." data-en="Behind the scenes, personal moodboard and everyday life off the live.">Bastidores, moodboard pessoal e o dia a dia fora da live.</p>
+          <p data-pt="Bastidores e o dia a dia fora da live." data-en="Behind the scenes and everyday life off the live.">Bastidores e o dia a dia fora da live.</p>
           <a class="card-link" href="https://instagram.com/apaolabianchi" target="_blank" rel="noopener">@apaolabianchi →</a>
-        </div>
-        <div class="card">
-          <span class="pill" data-pt="Marcas" data-en="Brands">Marcas</span>
-          <h3 style="font-size:20px;" data-pt="Parcerias recentes" data-en="Recent partnerships">Parcerias recentes</h3>
-          <p data-pt="Conteúdo patrocinado, sempre sinalizado como publi, para Bepantol Baby (Bayer) e Nestlé Chocolates." data-en="Sponsored content, always disclosed as ad, for Bepantol Baby (Bayer) and Nestlé Chocolates.">Conteúdo patrocinado, sempre sinalizado como publi, para Bepantol Baby (Bayer) e Nestlé Chocolates.</p>
         </div>
         <div class="card">
           <span class="pill" data-pt="Escrita" data-en="Writing">Escrita</span>
@@ -322,6 +376,23 @@
   });
 
   applyLang(lang);
+
+
+  // publis carousel
+  (function(){
+    var track = document.getElementById('pc-track'); if(!track) return;
+    document.querySelector('.pc-prev').addEventListener('click', function(){ track.scrollBy({left:-318, behavior:'smooth'}); });
+    document.querySelector('.pc-next').addEventListener('click', function(){ track.scrollBy({left:318, behavior:'smooth'}); });
+    track.addEventListener('click', function(e){
+      var b = e.target.closest('.pplay'); if(!b) return;
+      var card = b.closest('.pcard');
+      track.querySelectorAll('.pcard.playing').forEach(function(c){ c.classList.remove('playing'); c.querySelectorAll('iframe').forEach(function(f){ f.remove(); }); });
+      var f = document.createElement('iframe');
+      f.src = 'https://www.tiktok.com/player/v1/' + card.getAttribute('data-id') + '?music_info=1&description=1&autoplay=1';
+      f.allow = 'fullscreen; autoplay'; f.setAttribute('allowfullscreen',''); f.title = 'Vídeo do TikTok';
+      card.classList.add('playing'); card.appendChild(f);
+    });
+  })();
 
   // scroll reveal
   var io = new IntersectionObserver(function(entries){
