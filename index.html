@@ -88,7 +88,7 @@
   .hero-coral{ width:180px; height:180px; bottom:-60px; left:2%; background:var(--peach); }
   .hero-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
   .hero-photo{ position:relative; justify-self:center; width:min(100%,400px); aspect-ratio:4/5; border-radius:220px 220px 30px 30px; overflow:hidden; background:var(--coral); box-shadow:16px 16px 0 var(--plum); }
-  .hero-photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 25%; }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 30%; }
   .hero-photo::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(255,45,149,0) 55%,rgba(13,10,14,.35)); }
   @media (max-width:820px){ .hero-grid{ grid-template-columns:1fr; gap:34px; } .hero-photo{ order:-1; width:min(78%,300px); box-shadow:10px 10px 0 var(--plum); } .hero{ padding-top:56px; } }
   .hero h1{ font-size:clamp(52px,9vw,108px); }
@@ -103,6 +103,11 @@
   .section-head{ max-width:640px; margin-bottom:44px; }
   .section-head h2{ font-size:clamp(34px,5vw,52px); margin-top:10px; }
 
+
+  /* ---------- atriz ---------- */
+  #atriz{ background:var(--paper); border-top:1px solid var(--line); }
+  .sec-sub{ margin:14px 0 0; font-size:17px; line-height:1.6; color:var(--plum-soft); }
+  .pcard h3.t-sm{ font-size:30px; }
 
   /* ---------- publis carousel ---------- */
   #publis{ background:var(--plum); color:#fff; border-top:0; border-bottom:0; }
@@ -189,6 +194,28 @@
   .pill{ display:inline-block; font-size:11px; font-weight:800; letter-spacing:.05em; text-transform:uppercase; background:var(--coral); color:#fff; padding:4px 10px; border-radius:999px; width:fit-content; }
   @media (max-width:720px){ .proj-grid, .sobre-grid{ grid-template-columns:1fr; } }
 
+
+  /* ---------- formulario ---------- */
+  .cform{ max-width:720px; margin:0 auto 26px; text-align:left; display:grid; gap:18px; }
+  .cform fieldset{ border:0; padding:0; margin:0; }
+  .cform legend, .cform label.l{ display:block; font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--coral-deep); margin-bottom:10px; }
+  .topics{ display:flex; flex-wrap:wrap; gap:10px; }
+  .topics input{ position:absolute; opacity:0; pointer-events:none; }
+  .topics label{ border:2px solid var(--plum); border-radius:999px; padding:10px 18px; font-weight:700; font-size:14px; cursor:pointer; background:transparent; transition:all .15s ease; }
+  .topics input:checked + label{ background:var(--plum); color:#fff; border-color:var(--plum); }
+  .topics input:focus-visible + label{ outline:3px solid var(--coral); outline-offset:2px; }
+  .cform .row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:640px){ .cform .row{ grid-template-columns:1fr; } }
+  .cform input[type=text], .cform input[type=email], .cform textarea{ width:100%; border:2px solid var(--line); border-radius:14px; padding:13px 15px; font:inherit; font-size:16px; background:#fff; color:var(--plum); }
+  .cform textarea{ min-height:140px; resize:vertical; }
+  .cform input:focus, .cform textarea:focus{ outline:none; border-color:var(--coral); box-shadow:0 0 0 4px rgba(255,45,149,.15); }
+  .cform .hp{ position:absolute; left:-9999px; }
+  .cform .consent{ font-size:13px; color:var(--plum-soft); margin:0; }
+  .cform .send{ justify-self:start; cursor:pointer; font-family:inherit; }
+  .cform .send[disabled]{ opacity:.6; cursor:wait; }
+  .cform-msg{ min-height:24px; font-weight:700; font-size:15px; }
+  .cform-msg.ok{ color:#0a7a3e; } .cform-msg.err{ color:#b00020; }
+
   /* ---------- contato ---------- */
   #contato{ text-align:center; }
   #contato .section-head{ margin:0 auto 38px; }
@@ -212,6 +239,7 @@
     <a class="logo" href="#top">Paola Pax</a>
     <div class="navlinks">
       <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="#atriz" data-pt="Atriz" data-en="Acting">Atriz</a>
       <a href="#publis" data-pt="Publis" data-en="Brand work">Publis</a>
       <a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a>
       <a href="#contato" data-pt="Contato" data-en="Contact">Contato</a>
@@ -240,7 +268,7 @@
         <div><strong>BR·MX·FR·UK</strong><span data-pt="comunidade nas lives" data-en="community on the lives">comunidade nas lives</span></div>
       </div>
      </div>
-     <div class="hero-photo"><img src="fotos/paola.jpg" alt="Paola Pax" width="584" height="584" fetchpriority="high"></div>
+     <div class="hero-photo"><img src="fotos/paola-tiktok.jpg" alt="Paola Pax" width="600" height="565" fetchpriority="high"></div>
     </div>
   </section>
 
@@ -263,6 +291,58 @@
     </div>
   </section>
 
+  <section id="atriz">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-pt="Atuação" data-en="Acting">Atuação</p>
+        <h2 data-pt="Atriz: <span class='italic'>esquetes</span> e comédia" data-en="Acting: <span class='italic'>sketches</span> and comedy">Atriz: <span class="italic">esquetes</span> e comédia</h2>
+        <p class="sec-sub" data-pt="Vídeos de humor em que atuo, em parceria com o Yuri Viana (@yuriviana97)." data-en="Comedy videos where I act, made with Yuri Viana (@yuriviana97).">Vídeos de humor em que atuo, em parceria com o Yuri Viana (@yuriviana97).</p>
+      </div>
+      <div class="pc reveal">
+        <button class="pc-btn pc-prev" type="button" aria-label="Anterior">&#8592;</button>
+        <div class="pc-track">
+        <article class="pcard" data-embed="https://www.instagram.com/reel/DcrD0Hjxnhu/embed/" data-title="Date com a maníaca por pet" style="background-image:url(fotos/yuri-date.jpg)">
+          <div class="pcard-top"><span class="pill">Humor</span><span class="pcard-n">01</span></div>
+          <button class="pplay" type="button" aria-label="Assistir Date com a maníaca por pet"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
+          <h3 class="t-sm">Date com a maníaca por pet</h3>
+          <p class="pcard-meta" data-pt="Com direção de Yuri Viana" data-en="With Yuri Viana">Com Yuri Viana</p>
+          <a class="pcard-link" href="https://www.instagram.com/reel/DcrD0Hjxnhu/" target="_blank" rel="noopener" data-pt="Abrir no Instagram" data-en="Open on Instagram">Abrir no Instagram</a>
+        </article>
+        <article class="pcard" data-embed="https://www.instagram.com/reel/DZkaCBfRUti/embed/" data-title="Cabelos compridos" style="background-image:url(fotos/yuri-cabelos.jpg)">
+          <div class="pcard-top"><span class="pill">Humor</span><span class="pcard-n">02</span></div>
+          <button class="pplay" type="button" aria-label="Assistir Cabelos compridos"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
+          <h3 class="t-sm">Cabelos compridos</h3>
+          <p class="pcard-meta" data-pt="Com direção de Yuri Viana" data-en="With Yuri Viana">Com Yuri Viana</p>
+          <a class="pcard-link" href="https://www.instagram.com/reel/DZkaCBfRUti/" target="_blank" rel="noopener" data-pt="Abrir no Instagram" data-en="Open on Instagram">Abrir no Instagram</a>
+        </article>
+        <article class="pcard" data-embed="https://www.instagram.com/reel/DZaKoaWxqi8/embed/" data-title="Quem recebeu o elogio?" style="background-image:url(fotos/yuri-elogio.jpg)">
+          <div class="pcard-top"><span class="pill">Humor</span><span class="pcard-n">03</span></div>
+          <button class="pplay" type="button" aria-label="Assistir Quem recebeu o elogio?"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
+          <h3 class="t-sm">Quem recebeu o elogio?</h3>
+          <p class="pcard-meta" data-pt="Com direção de Yuri Viana" data-en="With Yuri Viana">Com Yuri Viana</p>
+          <a class="pcard-link" href="https://www.instagram.com/reel/DZaKoaWxqi8/" target="_blank" rel="noopener" data-pt="Abrir no Instagram" data-en="Open on Instagram">Abrir no Instagram</a>
+        </article>
+        <article class="pcard" data-embed="https://www.instagram.com/reel/DSpL56fkVnz/embed/" data-title="Você não quer passar o natal comigo?" style="background-image:url(fotos/yuri-natal.jpg)">
+          <div class="pcard-top"><span class="pill">Humor</span><span class="pcard-n">04</span></div>
+          <button class="pplay" type="button" aria-label="Assistir Você não quer passar o natal comigo?"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
+          <h3 class="t-sm">Você não quer passar o natal comigo?</h3>
+          <p class="pcard-meta" data-pt="Com direção de Yuri Viana" data-en="With Yuri Viana">Com Yuri Viana</p>
+          <a class="pcard-link" href="https://www.instagram.com/reel/DSpL56fkVnz/" target="_blank" rel="noopener" data-pt="Abrir no Instagram" data-en="Open on Instagram">Abrir no Instagram</a>
+        </article>
+        <article class="pcard" data-embed="https://www.instagram.com/reel/DPgc4SJEQHK/embed/" data-title="Amiga, quanto tempo" style="background-image:url(fotos/yuri-amiga.jpg)">
+          <div class="pcard-top"><span class="pill">Humor</span><span class="pcard-n">05</span></div>
+          <button class="pplay" type="button" aria-label="Assistir Amiga, quanto tempo"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
+          <h3 class="t-sm">Amiga, quanto tempo</h3>
+          <p class="pcard-meta" data-pt="Com direção de Yuri Viana" data-en="With Yuri Viana">Com Yuri Viana</p>
+          <a class="pcard-link" href="https://www.instagram.com/reel/DPgc4SJEQHK/" target="_blank" rel="noopener" data-pt="Abrir no Instagram" data-en="Open on Instagram">Abrir no Instagram</a>
+        </article>
+        </div>
+        <button class="pc-btn pc-next" type="button" aria-label="Próximo">&#8594;</button>
+      </div>
+      <p class="contact-note" style="text-align:left;"><a href="https://www.instagram.com/yuriviana97/" target="_blank" rel="noopener">@yuriviana97</a> <span data-pt="· Ao tocar, o vídeo é carregado do Instagram." data-en="· When you tap, the video is loaded from Instagram.">· Ao tocar, o vídeo é carregado do Instagram.</span></p>
+    </div>
+  </section>
+
   <section id="publis">
     <div class="wrap">
       <div class="section-head reveal">
@@ -272,35 +352,35 @@
       <div class="pc reveal">
         <button class="pc-btn pc-prev" type="button" aria-label="Anterior">&#8592;</button>
         <div class="pc-track" id="pc-track">
-        <article class="pcard" data-id="7706636496312225042" style="background-image:url(fotos/publi-bepantol.jpg)">
+        <article class="pcard" data-embed="https://www.tiktok.com/player/v1/7706636496312225042?music_info=1&description=1&autoplay=1" data-title="TikTok" style="background-image:url(fotos/publi-bepantol.jpg)">
           <div class="pcard-top"><span class="pill">Bayer</span><span class="pcard-n">01</span></div>
           <button class="pplay" type="button" aria-label="Assistir Bepantol Baby"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
           <h3>Bepantol Baby</h3>
           <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
           <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7706636496312225042" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
         </article>
-        <article class="pcard" data-id="7705401585278471442" style="background-image:url(fotos/publi-nestle.jpg)">
+        <article class="pcard" data-embed="https://www.tiktok.com/player/v1/7705401585278471442?music_info=1&description=1&autoplay=1" data-title="TikTok" style="background-image:url(fotos/publi-nestle.jpg)">
           <div class="pcard-top"><span class="pill">Choco Trio</span><span class="pcard-n">02</span></div>
           <button class="pplay" type="button" aria-label="Assistir Nestlé Chocolates"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
           <h3>Nestlé Chocolates</h3>
           <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
           <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7705401585278471442" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
         </article>
-        <article class="pcard" data-id="7576404381952756999" style="background-image:url(fotos/publi-localiza.jpg)">
+        <article class="pcard" data-embed="https://www.tiktok.com/player/v1/7576404381952756999?music_info=1&description=1&autoplay=1" data-title="TikTok" style="background-image:url(fotos/publi-localiza.jpg)">
           <div class="pcard-top"><span class="pill">Black Friday</span><span class="pcard-n">03</span></div>
           <button class="pplay" type="button" aria-label="Assistir Localiza"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
           <h3>Localiza</h3>
           <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
           <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7576404381952756999" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
         </article>
-        <article class="pcard" data-id="7570059498543402248" style="background-image:url(fotos/publi-matrix.jpg)">
+        <article class="pcard" data-embed="https://www.tiktok.com/player/v1/7570059498543402248?music_info=1&description=1&autoplay=1" data-title="TikTok" style="background-image:url(fotos/publi-matrix.jpg)">
           <div class="pcard-top"><span class="pill">L’Oréal</span><span class="pcard-n">04</span></div>
           <button class="pplay" type="button" aria-label="Assistir Matrix"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
           <h3>Matrix</h3>
           <p class="pcard-meta" data-pt="Conteúdo patrocinado no TikTok" data-en="Sponsored content on TikTok">Conteúdo patrocinado no TikTok</p>
           <a class="pcard-link" href="https://www.tiktok.com/@apaolapax/video/7570059498543402248" target="_blank" rel="noopener" data-pt="Abrir no TikTok" data-en="Open on TikTok">Abrir no TikTok</a>
         </article>
-        <article class="pcard" data-id="7568637392324791559" style="background-image:url(fotos/publi-tim.jpg)">
+        <article class="pcard" data-embed="https://www.tiktok.com/player/v1/7568637392324791559?music_info=1&description=1&autoplay=1" data-title="TikTok" style="background-image:url(fotos/publi-tim.jpg)">
           <div class="pcard-top"><span class="pill">Black Friday</span><span class="pcard-n">05</span></div>
           <button class="pplay" type="button" aria-label="Assistir TIM"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></button>
           <h3>TIM</h3>
@@ -349,6 +429,27 @@
         <p class="eyebrow" data-pt="Vamos conversar" data-en="Let's talk">Vamos conversar</p>
         <h2 data-pt="Contato <span class='italic'>comercial</span>" data-en="Business <span class='italic'>contact</span>">Contato <span class="italic">comercial</span></h2>
       </div>
+      <form class="cform reveal" id="cform" novalidate>
+        <fieldset>
+          <legend data-pt="Sobre o que você quer falar?" data-en="What would you like to talk about?">Sobre o que você quer falar?</legend>
+          <div class="topics">
+          <input type="radio" name="assunto" id="a-publi" value="Publi UGC/Ads" checked><label for="a-publi" data-pt="Publi UGC/Ads" data-en="UGC/Ads sponsored post">Publi UGC/Ads</label>
+          <input type="radio" name="assunto" id="a-live" value="Parceria em Live"><label for="a-live" data-pt="Parceria em Live" data-en="Live partnership">Parceria em Live</label>
+          <input type="radio" name="assunto" id="a-collab" value="Collabs"><label for="a-collab" data-pt="Collabs" data-en="Collabs">Collabs</label>
+          <input type="radio" name="assunto" id="a-outros" value="Outros assuntos"><label for="a-outros" data-pt="Outros assuntos" data-en="Other">Outros assuntos</label>
+          </div>
+        </fieldset>
+        <div class="row">
+          <div><label class="l" for="f-nome" data-pt="Seu nome" data-en="Your name">Seu nome</label><input type="text" id="f-nome" name="nome" autocomplete="name" required></div>
+          <div><label class="l" for="f-email" data-pt="E-mail" data-en="Email">E-mail</label><input type="email" id="f-email" name="email" autocomplete="email" required></div>
+        </div>
+        <div><label class="l" for="f-marca" data-pt="Marca ou empresa (opcional)" data-en="Brand or company (optional)">Marca ou empresa (opcional)</label><input type="text" id="f-marca" name="marca" autocomplete="organization"></div>
+        <div><label class="l" for="f-msg" data-pt="Mensagem" data-en="Message">Mensagem</label><textarea id="f-msg" name="mensagem" required></textarea></div>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="consent" data-pt="Ao enviar, você concorda em ser contatado por e-mail sobre esta mensagem. Não usamos seus dados para mais nada." data-en="By sending, you agree to be contacted by email about this message. We use your data for nothing else.">Ao enviar, você concorda em ser contatado por e-mail sobre esta mensagem. Não usamos seus dados para mais nada.</p>
+        <button class="btn btn--solid send" type="submit" data-pt="Enviar mensagem" data-en="Send message">Enviar mensagem</button>
+        <div class="cform-msg" id="cform-msg" role="status" aria-live="polite"></div>
+      </form>
       <div class="contact-row reveal">
         <a class="btn btn--solid" href="https://instagram.com/apaolabianchi" target="_blank" rel="noopener" data-pt="DM no Instagram" data-en="DM on Instagram">DM no Instagram</a>
         <a class="btn" href="https://www.tiktok.com/@apaolapax" target="_blank" rel="noopener" data-pt="Mensagem no TikTok" data-en="Message on TikTok">Mensagem no TikTok</a>
@@ -390,19 +491,45 @@
   applyLang(lang);
 
 
-  // publis carousel
-  (function(){
-    var track = document.getElementById('pc-track'); if(!track) return;
-    document.querySelector('.pc-prev').addEventListener('click', function(){ track.scrollBy({left:-318, behavior:'smooth'}); });
-    document.querySelector('.pc-next').addEventListener('click', function(){ track.scrollBy({left:318, behavior:'smooth'}); });
+  // carousels (publis + atriz): cover first, embed only after click (no autoplay on load)
+  document.querySelectorAll('.pc').forEach(function(pc){
+    var track = pc.querySelector('.pc-track'); if(!track) return;
+    pc.querySelector('.pc-prev').addEventListener('click', function(){ track.scrollBy({left:-318, behavior:'smooth'}); });
+    pc.querySelector('.pc-next').addEventListener('click', function(){ track.scrollBy({left:318, behavior:'smooth'}); });
     track.addEventListener('click', function(e){
       if(e.target.closest('.pcard-link') || e.target.closest('iframe')) return;
       var card = e.target.closest('.pcard'); if(!card || card.classList.contains('playing')) return;
-      track.querySelectorAll('.pcard.playing').forEach(function(c){ c.classList.remove('playing'); c.querySelectorAll('iframe').forEach(function(f){ f.remove(); }); });
+      document.querySelectorAll('.pcard.playing').forEach(function(c){ c.classList.remove('playing'); c.querySelectorAll('iframe').forEach(function(f){ f.remove(); }); });
       var f = document.createElement('iframe');
-      f.src = 'https://www.tiktok.com/player/v1/' + card.getAttribute('data-id') + '?music_info=1&description=1&autoplay=1';
-      f.allow = 'fullscreen; autoplay'; f.setAttribute('allowfullscreen',''); f.title = 'Vídeo do TikTok';
+      f.src = card.getAttribute('data-embed');
+      f.allow = 'fullscreen; autoplay; encrypted-media'; f.setAttribute('allowfullscreen',''); f.title = card.getAttribute('data-title') || 'Vídeo';
       card.classList.add('playing'); card.appendChild(f);
+    });
+  });
+
+
+  // formulario de contato (FormSubmit -> assessoria)
+  (function(){
+    var form = document.getElementById('cform'); if(!form) return;
+    var ENDPOINT = 'https://formsubmit.co/ajax/thewatermouse@gmail.com';
+    var msg = document.getElementById('cform-msg');
+    var T = {
+      pt:{ sending:'Enviando...', ok:'Mensagem enviada! A assessoria responde por e-mail em breve.', err:'Não foi possível enviar agora. Tente de novo ou use o DM abaixo.', need:'Preencha nome, e-mail e mensagem.' },
+      en:{ sending:'Sending...', ok:'Message sent! Her team will reply by email soon.', err:'Could not send right now. Please try again or use the DM below.', need:'Please fill in name, email and message.' }
+    };
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var d = new FormData(form); var L = (typeof lang !== 'undefined' && lang === 'en') ? 'en' : 'pt';
+      if(d.get('_honey')) return;
+      if(!d.get('nome') || !d.get('email') || !d.get('mensagem') || !/^\S+@\S+\.\S+$/.test(d.get('email'))){ msg.className='cform-msg err'; msg.textContent=T[L].need; return; }
+      var btn = form.querySelector('.send'); btn.disabled = true; msg.className='cform-msg'; msg.textContent=T[L].sending;
+      var payload = { _subject: '[Paola Pax] ' + d.get('assunto') + ' - ' + d.get('nome'), _template: 'table', _captcha: 'false',
+        assunto: d.get('assunto'), nome: d.get('nome'), email: d.get('email'), marca: d.get('marca') || '-', mensagem: d.get('mensagem'), _replyto: d.get('email'), origem: 'paolapax.thewatermouse.com' };
+      fetch(ENDPOINT, { method:'POST', headers:{ 'Content-Type':'application/json', 'Accept':'application/json' }, body: JSON.stringify(payload) })
+        .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ if(!r.ok || j.success === 'false' || j.success === false) throw new Error('fail'); }); })
+        .then(function(){ msg.className='cform-msg ok'; msg.textContent=T[L].ok; form.reset(); })
+        .catch(function(){ msg.className='cform-msg err'; msg.textContent=T[L].err; })
+        .then(function(){ btn.disabled = false; });
     });
   })();
 
