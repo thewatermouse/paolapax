@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /midia-kit-paola-bianchi.pdf
 
 Sitemap: https://paolapax.thewatermouse.com/sitemap.xml
