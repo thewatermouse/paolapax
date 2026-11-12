@@ -13,7 +13,7 @@ atributos `data-pt` / `data-en` + `localStorage`.
 ## O que já é real
 
 - Nome, handles e links: TikTok [@apaolapax](https://www.tiktok.com/@apaolapax),
-  Instagram [@paolabianchi](https://instagram.com/paolabianchi)
+  Instagram [@apaolabianchi](https://instagram.com/apaolabianchi)
 - Números do hero (seguidores/curtidas do TikTok) — **atualizar periodicamente**,
   foram capturados em 28/09/2026
 - Base em São Paulo, audiência internacional (BR/MX/FR/UK) — vem da bio pública do TikTok
@@ -42,3 +42,7 @@ atributos `data-pt` / `data-en` + `localStorage`.
 4. No Cloudflare (zona `thewatermouse.com`), criar registro `CNAME` —
    `paolapax` → `thewatermouse.github.io` (proxy Cloudflare pode ficar ligado).
 5. Aguardar o certificado HTTPS do GitHub Pages (alguns minutos após o DNS propagar).
+
+## Atualizado em 12/11/2026 (dados dos perfis públicos)
+
+Handle do Instagram corrigido para @apaolabianchi (7,4 mil seguidores); TikTok 11,4 mil seguidores / 98,4 mil curtidas; bio com atriz, cantora, streamer e idiomas BR/ES/EN/FR; cards de parcerias (Bepantol Baby, Nestlé Chocolates, vistos em posts públicos sinalizados como publi, CONFIRMAR com ela) e Substack. Ainda placeholders: fotos do moodboard e do retrato (precisam de arquivos dela) e e-mail comercial.
